@@ -21,7 +21,6 @@ export default [
       		{ path: '/page1', component: Page1, name: 'Page1' }
     	]
 	}*/
-	{ path: '*', component: NotFoundComponent },
 	{ path: '/', component: Index, name: 'index' },
 	{ path: '/page1', component: Page1, name: 'page1' },
 	{ path: '/page2', component: Page2, name: 'page2' },
@@ -37,4 +36,5 @@ export default [
 	}*/
 	{ path: '/page3', component: Page3, name: 'page3' },
 	{ path: '/page3/:userId', component: Page3, name: 'page31' },
+	{ path: '*', component: NotFoundComponent },
 ]
