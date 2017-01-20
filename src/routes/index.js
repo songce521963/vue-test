@@ -6,6 +6,11 @@ import 'nprogress/nprogress.css'
 
 Vue.use(VueRouter);
 
+Object.keys(routes).forEach(key => {
+	routes[key].path = '/:lang'+routes[key].path
+})
+
+
 const router = new VueRouter({
     mode: 'history',
     routes
@@ -14,6 +19,7 @@ const router = new VueRouter({
 NProgress.configure({ ease: 'ease', speed: 500 });
 
 router.beforeEach((to, from, next) => {
+	to.params.lang = Vue.config.lang
     NProgress.start();
     next()
 })

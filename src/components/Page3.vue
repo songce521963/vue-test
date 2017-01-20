@@ -53,7 +53,7 @@
 export default {
     created() {
         let id = this.$route.params.userId
-        if (id) this.getUser(id)
+        id? this.getUser(id): this.initFormData()
     },
     data() {
         return {
@@ -84,7 +84,21 @@ export default {
             addUserUrl: '/api/user'
         }
     },
+    watch: {
+        '$route' (to, from) {
+           this.$refs['form'].resetFields()
+           this.initFormData()
+        }
+    },
     methods: {
+        initFormData(){
+            this.form = {
+                id: '',
+                name: '',
+                role: 'system',
+                address: '',
+            }
+        },
         onSubmit(formName) {
             this.$refs[formName].validate((valid) => {
                 if (valid) {

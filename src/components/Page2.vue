@@ -18,6 +18,12 @@
                     </el-popover>
                 </template>
             </el-table-column>
+            <el-table-column label="住址" width="280" style="">
+                <template scope="scope">
+                    <el-icon name="address"></el-icon>
+                    <span style="margin-left: 10px">{{ scope.row.address }}</span>
+                </template>
+            </el-table-column>
             <el-table-column label="权限" width="180">
                 <template scope="scope">
                     <el-icon name="role"></el-icon>
@@ -37,6 +43,7 @@
 export default {
     components: {},
     created() {
+        console.log(this)
         this.getUsers()
     },
     data() {
@@ -44,6 +51,11 @@ export default {
             tableData: [],
             usersUrl: '/api/users',
             userUrl: '/api/user/{id}'
+        }
+    },
+    watch: {
+        '$lang' () {
+            this.getUsers()
         }
     },
     methods: {

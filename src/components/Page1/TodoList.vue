@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h1>{{title}}</h1>
+		<h1>{{title}}  {{ $t('message.hello') }}</h1>
 		<h2>点击次数:{{count}},计算之后的结果是:{{computedCount}}</h2>
 		<button @click="addCount">点击</button>
 		<button @click="getUserInfoAsync">获取用户信息</button>
@@ -42,7 +42,6 @@
 </template>
 
 <script>	
-import { saveData, getData} from '../../util/store'
 import TestChild from './Child'
 import { ADD_COUNT, GET_USER_INFO } from '../../store/mutation-types'
 
