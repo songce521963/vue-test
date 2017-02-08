@@ -1,6 +1,14 @@
 import { Notification, Loading } from 'element-ui'
 import Vue from 'vue'
 
+/*export const nprogress = (request, next) => {
+    NProgress.start();
+    next((response) => {
+        NProgress.done();
+        return response
+    })
+}*/
+
 export const loading = (request, next) => {
     let loadingInstance = Loading.service({ fullscreen: true, customClass: 'el-loading' })
     setTimeout(() => {

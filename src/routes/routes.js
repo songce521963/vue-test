@@ -5,6 +5,8 @@ import Index from '../components/Index'
 import Page1 from '../components/Page1'
 import Page2 from '../components/Page2'
 import Page3 from '../components/Page3'
+import Commodity from '../components/BCommodity'
+import CommodityApp from '../containers/Commodity/App'
 
 export default [
     /*	{
@@ -36,5 +38,7 @@ export default [
     }*/
     { path: '/page3', component: Page3, name: 'page3' },
     { path: '/page3/:userId', component: Page3, name: 'page31' },
+    { path: '/commodity', component: Commodity, name: 'Commodity' },
+    { path: '/commodityApp', component: CommodityApp, name: 'CommodityApp' },
     { path: '*', component: NotFoundComponent },
 ]

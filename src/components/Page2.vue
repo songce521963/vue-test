@@ -55,6 +55,7 @@ export default {
     },
     watch: {
         '$lang' () {
+            this.tableData = []
             this.getUsers()
         }
     },

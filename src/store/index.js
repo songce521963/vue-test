@@ -6,6 +6,7 @@ import * as actions from './actions'
 import * as getters from './getters'
 import * as types from './mutation-types'
 import vueResource from 'vue-resource'
+import commodity from './modules/commodity'
 
 Vue.use(Vuex)
 
@@ -33,6 +34,9 @@ export default new Vuex.Store({
     getters,
     mutations,
     actions,
+    modules: {
+        commodity,
+    },
     strict: debug,
     plugins: debug ? [createLogger()] : []
 })

@@ -7,8 +7,8 @@
             <el-menu-item index="1-3" :route="{name:'page2'}">选项3</el-menu-item>
             <el-menu-item index="1-4" :route="{name:'page3'}">选项4</el-menu-item>
         </el-submenu>
-        <el-menu-item index="2" :route="{name:'index'}"><i class="el-icon-menu"></i>导航二</el-menu-item>
-        <el-menu-item index="3" :route="{name:'page1'}"><i class="el-icon-setting"></i>导航三</el-menu-item>
+        <el-menu-item index="2" :route="{name:'Commodity'}"><i class="el-icon-menu"></i>Node koa2</el-menu-item>
+        <el-menu-item index="3" :route="{name:'CommodityApp'}"><i class="el-icon-setting"></i>vuex CommodityApp</el-menu-item>
     </el-menu>
 </template>
 <script>
