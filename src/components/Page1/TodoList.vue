@@ -38,7 +38,7 @@
 		<test-child :message="message" @getChildMessage="getChildMessage">
 			<h1 slot="text">把你干掉吧</h1>
 		</test-child>
-	<div>
+	</div>
 </template>
 
 <script>	
